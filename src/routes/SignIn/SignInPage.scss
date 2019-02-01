@@ -1,0 +1,38 @@
+@import '../../utils/utils.scss';
+body {
+  height: 100%;
+}
+.page {
+  text-align:center;
+  background-color: #fff;
+  height: 100%;
+}
+.height {
+  height: pxToVw(400);
+}
+.avatar {
+  width: pxToVw(150);
+  height: pxToVw(150);
+  img {
+    width: inherit;
+    height: inherit;
+  }
+}
+.input {
+  flex: 1;
+  :global(.am-input-control) input
+  {
+    font-size: 14px!important;
+  }
+}
+.span {
+  font-size: pxToVw(35);
+}
+.list {
+  :global(.am-list-body) {
+    &:before,
+    &:after {
+      height: 0!important;
+    };
+  }
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?ce39a20d597cf01a63ee32b4049d7509";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+  <title>心愿先生</title>
+  <link rel="stylesheet" href="index.css" />
+  <script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+
+  <script src="//cdn.bootcss.com/eruda/1.4.2/eruda.min.js"></script>
+  <script src="https://as.alipayobjects.com/g/component/fastclick/1.0.6/fastclick.js"></script>
+  <script>
+    if ('addEventListener' in document) {
+      document.addEventListener('DOMContentLoaded', function() {
+        if (event.cancelable) {
+          // 判断默认行为是否已经被禁用
+          if (!event.defaultPrevented) {
+            event.preventDefault()
+            FastClick.attach(document.body)
+          }
+        }
+      }, { passive: false });
+    }
+
+    if(!window.Promise) {
+      document.writeln('<script src="https://as.alipayobjects.com/g/component/es6-promise/3.2.2/es6-promise.min.js"'+'>'+'<'+'/'+'script>');
+    }
+  </script>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="index.js"></script>
+  <script type="text/javascript">
+    if (JSON.parse(localStorage.debug)) eruda.init()
+    // eruda.init()
+    // var wxConfig = localStorage.wxConfig
+
+    // if (wxConfig) {
+    //   wx.config(JSON.parse(wxConfig))
+    // }
+  </script>
+</body>
+</html>

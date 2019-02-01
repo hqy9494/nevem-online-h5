@@ -1,0 +1,50 @@
+html,
+body,
+:global(#root) {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #eee;
+  -webkit-overflow-scrolling : touch;
+}
+
+:global(.am-picker-popup-item) {
+  color: #ffc107 !important;
+}
+
+:global(input::-webkit-input-placeholder) {
+  /* WebKit browsers */
+  color: #888;
+}
+
+:global(input:-moz-placeholder) {
+  /* Mozilla Firefox 4 to 18 */
+  color: #888;
+}
+
+:global(input::-moz-placeholder) {
+  /* Mozilla Firefox 19+ */
+  color: #888;
+}
+
+:global(input:-ms-input-placeholder) {
+  /* Internet Explorer 10+ */
+  color: #888;
+}
+
+/* @font-face {
+  font-family: 'PingFangSC-Regular'; 
+  src: url('./assets/font/PingFangSC-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PingFangSC-Light'; 
+  src: url('./assets/font/PingFangSC-Light.ttf');
+  font-weight: normal;
+  font-style: normal;
+} */
+
+html,body { font-family: sans-serif; }

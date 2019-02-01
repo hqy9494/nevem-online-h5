@@ -1,0 +1,137 @@
+@import '../../utils/utils.scss';
+@function p($px) {
+    @return pxToVw($px);
+}
+
+.container * {
+    box-sizing: border-box;
+    list-style: none;
+}
+
+.container {
+    width: 100%;
+    height: auto;
+    background: #fff;
+    padding-bottom: p(20);
+    position: relative;
+    /*padding-bottom:p(150);*/
+}
+
+.Ablock {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.bannerBox {
+    width: 100%;
+    height: p(469);
+    position: relative;
+    >div {
+        height: p(60);
+        width: 100%;
+        line-height: p(60);
+        z-index: 101;
+        position: absolute;
+        top: 0;
+        left: 0;
+        .am-wingblank {
+            margin: 0!important;
+        }
+        .autoplay {
+            background: rgba(0, 0, 0, .6);
+            height: 100%;
+            width: 100%;
+            color: #fff;
+            font-size: p(24);
+            >div {
+                width: p(30);
+                height: p(30);
+                display: inline-block;
+                position: relative;
+                top: p(5);
+                margin: 0 p(40);
+                >img {
+                    width: 100%;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+    img {
+        width: 100%;
+        height: 100%;
+        z-index: 100;
+    }
+}
+
+.nav {
+    width: 100%;
+    height: auto;
+    background:#fff3cf;
+    .gotoPK{
+       width: 100%;
+       height: p(272);
+       img{width: 100%;height: 100%;}
+    }
+    >ul {
+        margin:0;
+        height: auto;
+        width: 100%;
+        padding: p(39) p(41) 0 p(41);
+        display: flex;
+        >li {
+            flex: 1;
+            transition: background 0.3s;
+            height: auto;
+            padding: p(10);
+            padding-bottom:0; 
+            &:active {
+                background: #f1f1f1;
+            }
+            >img {
+                width: p(110);
+                height: p(110);
+                margin: 0 auto;
+                display: block;
+            }
+            >div {
+                text-align: center;
+                margin-top: p(15);
+                font-size: p(24);
+            }
+        }
+    }
+}
+
+.timeLimit {
+    width: 100%;
+    height: auto;
+    .top {
+        height: p(73);
+        width: 100%;
+        padding-top: p(43);
+        text-align: center;
+        .name {
+            font-size: p(29);
+            line-height: p(30);
+        }
+    }
+    .bottom {
+        width: 100%;
+        height: auto;
+        padding: 0 p(40);
+        img {
+            width: 100%;
+            height: p(361);
+        }
+        .countDown {
+            font-size: p(23);
+            color: #666666;
+            margin: p(10) 0;
+            text-align: center;
+            height: p(30);
+            line-height: p(30);
+        }
+    }
+}

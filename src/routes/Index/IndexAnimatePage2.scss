@@ -1,0 +1,347 @@
+@import '../../utils/utils.scss';
+$thisFontSize: 13.34;
+$boxWH: 516 / 972;
+
+@function pxToVh($px) {
+  @return $px / $thisFontSize * 1vh;
+}
+
+.page{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+.wrap{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.bac{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.terminalAfter{
+  width: 100vh * $boxWH;
+  height: 100vh;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  img{
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.box{
+  width: pxToVh(510);
+  height: pxToVh(1020);
+  position: absolute;
+  left: pxToVh(36);
+  top: pxToVh(270);
+}
+
+.item{
+  width: pxToVw(103);
+  height: pxToVw(142);
+  position: absolute;
+}
+
+.boxBefore{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.clickBoxWrap{
+  width: 100vh * $boxWH;
+  height: 100vh;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  img{
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.buyinfo{
+  width: pxToVw(68);
+  height: pxToVw(164);
+  position: absolute;
+  right: 0;
+  top: pxToVw(268);
+}
+.detail{
+  position: relative;
+  img{
+    width: 100%;
+    display: block;
+  }
+  .toAward{
+    width: pxToVw(270);
+    height: pxToVw(258);
+    position: absolute;
+    top: 63%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .toTop{
+    width: pxToVw(432);
+    height: pxToVw(77);
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.itemWrap{
+  position: absolute;
+}
+// col1
+.item1Animate1{
+  animation: step1 1s linear, item1step2 .5s 1s ease-in forwards;
+}
+.item1Animate2{
+  animation: step1 1s linear, item1step2 .4s 1s ease-in forwards;
+}
+.item1Animate3{
+  animation: step1 1s linear, item1step2 .35s 1s ease-in forwards;
+}
+.item1Animate4{
+  animation: step1 1s linear, item1step2 .25s 1s ease-in forwards;
+}
+
+// col2
+.item2Animate1{
+  animation: step1 1s linear, item2step2 .5s 1s ease-in forwards;
+}
+.item2Animate2{
+  animation: step1 1s linear, item2step2 .4s 1s ease-in forwards;
+}
+.item2Animate3{
+  animation: step1 1s linear, item2step2 .35s 1s ease-in forwards;
+}
+.item2Animate4{
+  animation: step1 1s linear, item2step2 .25s 1s ease-in forwards;
+}
+
+// col3
+.item3Animate1{
+  animation: step1 1s linear, item3step2 .5s 1s ease-in forwards;
+}
+.item3Animate2{
+  animation: step1 1s linear, item3step2 .4s 1s ease-in forwards;
+}
+.item3Animate3{
+  animation: step1 1s linear, item3step2 .35s 1s ease-in forwards;
+}
+.item3Animate4{
+  animation: step1 1s linear, item3step2 .25s 1s ease-in forwards;
+}
+
+
+// 变大
+@keyframes step1{
+  100%{
+    transform: scale(1.3);
+  }
+}
+
+// 掉下1
+@keyframes item1step2{
+  0%{
+    transform: scale(1.3);
+  }
+  90%{
+    transform: scale(1.3) rotateZ(30deg);
+  }
+  100%{
+    transform: scale(1.3) rotateZ(90deg);
+    bottom: 0;
+  }
+}
+
+// 掉下2
+@keyframes item2step2{
+  0%{
+    transform: scale(1.3);
+  }
+  86%{
+    transform: scale(1.3) rotateZ(-20deg);
+    bottom: 0;
+  }
+  100%{
+    transform-origin: 0 100%;
+    transform: scale(1.3) rotateZ(0deg);
+    bottom: 0;
+  }
+}
+
+// 掉下3
+@keyframes item3step2{
+  0%{
+    transform: scale(1.3);
+  }
+  70%{
+    transform: translateX(50%) scale(1.3) rotateZ(-60deg);
+    bottom: 0;
+  }
+  100%{
+    transform-origin: 0 100%;
+    transform: translateX(90%) scale(1.3) rotateZ(-90deg);
+    bottom: 0;
+  }
+}
+
+.circle{
+  width: pxToVw(66);
+  height: pxToVw(68);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+
+}
+
+.circleAnimate{
+  animation: circle 1s linear forwards;
+}
+
+@keyframes circle{
+  100%{
+    opacity: 0;
+    z-index: -1;
+    transform: translateX(-50%) rotateZ(-45deg);
+  }
+}
+
+.modal {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .6);
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  .tip {
+    width: pxToVw(507);
+    height: pxToVw(800);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url("../../assets/Img/index-modal.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+
+  .modalClose {
+    width: pxToVw(50);
+    height: pxToVw(90);
+    position: absolute;
+    top: pxToVw(-90);
+    right: 1vw;
+    background-image: url("../../assets/Img/index-close.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+
+  .soldout{
+    width: pxToVw(476);
+    height: pxToVw(584);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: url("../../assets/Img/animate/soldout.png") center center no-repeat;
+    background-size: cover;
+    text-align: center;
+    padding-top: pxToVw(300);
+    box-sizing: border-box;
+    span{
+      color: #FA4B1C;
+      font-weight: bold;
+    }
+    img{
+      width: 100%;
+      height: 100%;
+    }
+    .soldoutTop{
+      margin-bottom: pxToVw(40);
+    }
+    .soldoutBottom{
+      margin-bottom: pxToVw(30);
+    }
+    .soldoutBtn{
+      width: pxToVw(230);
+      height: pxToVw(50);
+      background-color: #FA4B1C;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: pxToVw(50);
+      margin: 0 auto;
+      font-weight: bold;
+    }
+  }
+}
+.tel{
+  width: pxToVw(139);
+  height: pxToVw(145);
+  position: absolute;
+  right: 0;
+  bottom: 11%;
+  img{
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.toLike{
+  width: pxToVw(144);
+  height: pxToVw(144);
+  position: absolute;
+  right: pxToVw(30);
+  bottom: pxToVw(30);
+  z-index: 1;
+  img{
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+}
+
+.modalInfo{
+  overflow: scroll;
+  height: 70vh;
+  font-size: 12px;
+  text-align: left;
+  table,table tr th, table tr td {
+    border:1px solid #ddd;
+  }
+  //table, tr, th, td, thead, tbody{
+  //  margin: 0;
+  //  padding: 0;
+  //}
+}
+
+.need{
+  width: pxToVw(68);
+  height: pxToVw(164);
+  position: absolute;
+  right: 0;
+  top: pxToVw(500);
+}

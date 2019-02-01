@@ -1,0 +1,25 @@
+@import '../../utils/utils.scss';
+.noData {
+  margin-top: pxToVw(230);
+  img {
+    display: block;
+    margin: 0 auto;
+    width: pxToVw(230);
+    height: pxToVw(200);
+  }
+  span {
+    margin-top: pxToVw(50);
+    display: block;
+    text-align: center;
+    font-size: pxToVw(30);
+    color: #999;
+  }
+  a {
+    margin-top: pxToVw(25);
+    display: block;
+    text-align: center;
+    font-size: pxToVw(30);
+    color: #060001;
+    text-decoration: underline;
+  }
+}

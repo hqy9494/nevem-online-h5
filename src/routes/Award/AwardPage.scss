@@ -1,0 +1,124 @@
+@import '../../utils/utils.scss';
+
+.wrap {
+  min-height: 100%;
+}
+
+.top {
+  width: 100%;
+  height: pxToVw(337);
+}
+
+.list {
+  padding: pxToVw(20);
+}
+
+.item {
+  background-color: #fff;
+  padding: pxToVw(20) 0;
+  display: flex;
+  margin-bottom: pxToVw(20);
+  border-radius: pxToVw(10);
+  box-sizing: border-box;
+
+  .itemLeft,
+  .itemRight {
+    flex: 1;
+  }
+
+  .itemLeft {
+    height: pxToVw(230);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &>div {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    span {
+      position: absolute;
+      top: 6vw;
+      left: 45%;
+      transform: translateX(-50%);
+      font-size: pxToVw(36);
+      color: #D92D2D;
+    }
+
+    sub {
+      margin-left: 0.5vw;
+      font-size: pxToVw(16);
+      color: #D92D2D;
+      bottom: 0;
+    }
+
+    img {
+      width: 80%;
+    }
+  }
+
+  .itemRight {
+    padding-right: pxToVw(20);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+
+    .title {
+      font-weight: bold;
+      font-size: pxToVw(40);
+    }
+
+    .to {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: pxToVw(270);
+      height: pxToVw(50);
+      border-radius: pxToVw(50);
+      background-image: linear-gradient(to right, #fff, #FFD328);
+      margin-top: pxToVw(30);
+
+      &>span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    .use {
+      background-image: linear-gradient(to right, #fff, #DADADA);
+    }
+  }
+}
+
+.tabs {
+  width: 100%;
+  height: pxToVw(90);
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tab {
+  width: 50%;
+  font-size: pxToVw(30);
+  color: #000;
+  text-align: center;
+
+  span {
+    display: inline-block;
+    height: pxToVw(90);
+    line-height: pxToVw(90);
+  }
+}
+
+.tabActive {
+  span {
+    border-bottom: 1px solid #000;
+  }
+}

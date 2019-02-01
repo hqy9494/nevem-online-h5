@@ -1,0 +1,121 @@
+@import '../../utils/utils.scss';
+
+.top {
+  width: pxToVw(750);
+  height: pxToVw(377);
+  background-image: url(../../assets/Img/a5.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.couponShopList {
+  margin: pxToVw(20) 0;
+  padding: 0 pxToVw(20);
+
+  li {
+    width: 49.5%;
+    display: inline-block; // padding: pxToVw(10);
+    margin-bottom: pxToVw(24);
+    box-sizing: border-box;
+
+    &:nth-child(odd) {
+      padding-right: pxToVw(12);
+    }
+
+    &:nth-child(even) {
+      padding-left: pxToVw(12);
+    }
+  }
+  .couponShopItemWrap{
+    padding: pxToVw(10);
+  }
+  .couponShopItem {
+    // margin: 0 auto;
+    width: 100%;
+    background-color: #fff;
+    border-radius: pxToVw(10);
+  }
+
+  .couponShopItemImg {
+    width: 100%;
+    height: pxToVw(320);
+    overflow: hidden;
+    img {
+      max-width: 100%;
+      max-height: pxToVw(320);
+    }
+  }
+
+  .couponShopItemTitle {
+    margin-top: pxToVw(12);
+    padding: 0 pxToVw(8);
+    font-size: pxToVw(18);
+    color: #333;
+    line-height: 1.5;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: bold;
+  }
+
+  .couponShopItemDesc {
+    margin: 0;
+    padding: 0 pxToVw(8);
+    font-size: pxToVw(16);
+    color: #666;
+    line-height: 1.5;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-bottom: pxToVw(20);
+  }
+
+  .couponShopItemPrice {
+    padding: 0 pxToVw(8);
+
+    .couponShopItemLabel {
+      font-size: pxToVw(14);
+      color: #fff;
+      background-color: #ffb017;
+      padding: pxToVw(5);
+      border-radius: pxToVw(30);
+      padding: 0 pxToVw(14);
+    }
+
+    .couponShopItemValue {
+      margin-left: 1vw;
+      font-size: pxToVw(20);
+      color: #E0273D;
+    }
+  }
+
+  .couponShopItemCoupon {
+    margin-top: pxToVw(15);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: pxToVw(70);
+    background: url(../../assets/Img/couponShop-bga.png) center center no-repeat;
+    background-size: 100% 100%;
+
+    .couponShopItemCouponLeft {
+      span {
+        font-size: pxToVw(24);
+
+        &.couponShopItemCouponValue {
+          font-size: pxToVw(64);
+        }
+      }
+    }
+
+    .couponShopItemCouponRight {
+      font-size: pxToVw(20);
+      color: #E0273D;
+
+      span {
+        display: block;
+      }
+    }
+  }
+}

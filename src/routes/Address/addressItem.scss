@@ -1,0 +1,45 @@
+@import '../../utils/utils.scss';
+.item {
+  position: relative;
+  padding: pxToVw(20) 0;
+  padding-left: pxToVw(85);
+  padding-right: pxToVw(150);
+  border-bottom: 1px solid #eee;
+  background-color: #fff;
+  a {
+    position: absolute;
+    top: 50%;
+    right: pxToVw(30);
+    transform: translateY(-50%);
+    color: #FFD328;
+  }
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  left: pxToVw(30);
+  transform: translateY(-50%);
+  width: pxToVw(25);
+  height: pxToVw(25);
+  background-color: #FFD328;
+  border-radius: 50%;
+}
+
+.name {
+  font-size: pxToVw(30);
+  color: #333;
+}
+
+.phone {
+  margin-left: pxToVw(60);
+  font-size: pxToVw(30);
+  color: #333;
+}
+
+.details {
+  margin-top: pxToVw(20);
+  font-size: pxToVw(24);
+  color: #5d5d5d;
+  line-height: 1.3;
+}

@@ -1,0 +1,74 @@
+@import '../../utils/utils.scss';
+
+.main {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  // background-image: url(../../assets/Img/succ-bg.png);
+  background-image: url(../../assets/Img/succ2-bg.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.desc {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: pxToVw(430);
+  background-image: url(../../assets/Img/succ2-desc.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.btn {
+  position: absolute;
+  bottom: pxToVw(410);
+  left: 50%;
+  transform: translateX(-50%);
+  width: pxToVw(300);
+  height: pxToVw(70);
+  background-image: url(../../assets/Img/succ2-btn.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  color: #07439E;
+  text-align: center;
+}
+
+.text1 {
+  margin-top: pxToVw(20);
+  display: block;
+  font-size: pxToVw(35);
+}
+
+.text2 {
+  margin-top: pxToVw(10);
+  display: block;
+  font-size: pxToVw(65);
+}
+
+.text3 {
+  margin-top: pxToVw(10);
+  display: block;
+  font-size: pxToVw(85);
+  font-weight: bold;
+}
+
+.text4 {
+  margin-top: pxToVw(10);
+  display: block;
+  font-size: pxToVw(45);
+  font-weight: bold;
+
+}

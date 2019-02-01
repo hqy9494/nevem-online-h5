@@ -1,0 +1,218 @@
+@import '../../utils/utils.scss';
+
+.page {
+  position: relative;
+  //position: fixed;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #ffc900; 
+  .content {
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: pxToVw(120);
+    padding-bottom: pxToVW(300);
+    min-height: 100vh;
+    left: 0;
+    position: relative;
+    .bgimg{
+      width: 100%;
+      display: block;
+      margin: 0 auto;
+    }
+    .cards {
+      position: absolute;
+      z-index: 1;
+      width: pxToVw(550);
+      height: pxToVw(700);
+      // border: 1px solid black;
+      top: pxToVw(375);
+      left: pxToVw(102);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-content: space-around;
+      padding: pxToVw(16);
+      box-sizing: border-box;
+      perspective: pxToVw(1200);
+      // transform-style:preserve-3d;
+      .card {
+        width: pxToVw(240);
+        height: pxToVw(320);
+        transition: all 0.5s ease;
+        position: absolute;   
+        transform-style:preserve-3d;
+        .back {
+          width: pxToVw(240);
+          height: pxToVw(320);
+          transform:   translateZ(pxToVw(1));
+          position: absolute;
+          top: 0;
+          left: 0;
+          // backface-visibility: hidden;
+        }
+        .front {
+          width: pxToVw(240);
+          height: pxToVw(320);
+          transform: rotateY(180deg);
+          position: absolute;
+          top: 0;
+          left: 0;
+          // backface-visibility: hidden;
+        }
+      }
+      .open {
+        transform: rotateY(180deg)
+      }
+      .focus {
+        @extend .card;
+        top: pxToVw(180);
+        left: pxToVw(160);
+      }
+      .card1 {
+        @extend .card;
+        top: pxToVw(22);
+        left: pxToVw(25);
+      }
+      .card2 {
+        @extend .card;
+        top: pxToVw(22);
+        right: pxToVw(25);
+      }
+      .card3 {
+        @extend .card;
+        bottom: pxToVw(22);
+        left: pxToVw(25);
+      }
+      .card4 {
+        @extend .card;
+        bottom: pxToVw(22);
+        right: pxToVw(25);
+      }
+      .card10 {
+        @extend .card1;
+        transform: rotateY(180deg)
+      }
+      .card20 {
+        @extend .card2;
+        transform: rotateY(180deg)
+      }
+      .card30{
+        @extend .card3;        
+        transform: rotateY(180deg)
+
+      }
+      .card40 {
+        @extend .card4;
+        transform: rotateY(180deg)
+      }
+      
+      .card100 {
+        @extend .card10;
+        transform: rotateY(180deg);
+        box-shadow:0 0 pxToVw(80) yellow;
+        animation: light 1s infinite;
+      }
+      .card200 {
+        @extend .card20;
+        transform: rotateY(180deg);
+        box-shadow:0 0 pxToVw(80) yellow;
+        animation: light 1s infinite;
+      }
+      .card300{
+        @extend .card30;        
+        transform: rotateY(180deg);
+        box-shadow: 0 0 pxToVw(80) yellow;
+        animation: light 1s infinite;
+      }
+      .card400 {
+        @extend .card40;
+        transform: rotateY(180deg);
+        box-shadow:0 0 pxToVw(80) yellow;
+        animation: light 1s infinite;
+      }
+    }
+  }
+
+  @keyframes light {
+    0%   { box-shadow:0 0 pxToVw(80) yellow;outline: pxToVw(6) dashed yellow;}
+    20%  { box-shadow:0 0 pxToVw(50) yellow;outline: pxToVw(4) dashed yellow;}
+    40% { box-shadow:0 0 pxToVw(20) yellow;outline: pxToVw(2) dashed yellow;}
+    50% { box-shadow:0 0 pxToVw(0) yellow;outline: pxToVw(1) dashed yellow;}
+    60%  { box-shadow:0 0 pxToVw(20) yellow;outline: pxToVw(2) dashed yellow;}
+    80%  { box-shadow:0 0 pxToVw(50) yellow;outline: pxToVw(4) dashed yellow;}
+    100% { box-shadow:0 0 pxToVw(80) yellow;outline: pxToVw(6) dashed yellow;}
+  }
+  .foot {
+    width: 100%;
+    height: pxToVw(96);
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
+
+}
+
+  .modalPrize{
+    z-index: 100;
+    .imgWrap{
+      width: 80%;
+      position: relative;
+    }
+    img{
+      width: 100%;
+    }
+    .btn{
+      width: pxToVw(80);
+      height: pxToVw(80);
+      // background: red;
+      position: absolute;
+      top: -2%;
+      right: 4%;
+    }
+    
+    .buy {
+      width: pxToVw(250);
+      height: pxToVw(75);
+      position: absolute;
+      bottom: 6.5%;
+      left: 51%;
+      z-index: 100;
+      // border: 1px solid black;
+      transform: translateX(-50%);
+    }
+  }
+
+
+.modal{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, .6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bottom{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: pxToVw(120);
+  display: flex;
+  background-color: #ffc900;
+  .bottomItem{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img{
+      width: pxToVw(319);
+      height: pxToVw(105);
+    }
+  }
+}

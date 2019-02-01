@@ -1,0 +1,6 @@
+$baseFontSize: 7.5;
+$basisColor: #FFC107;
+
+@function pxToVw($px) {
+  @return $px / $baseFontSize * 1vw;
+}

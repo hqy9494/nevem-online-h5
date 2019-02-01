@@ -1,0 +1,361 @@
+@import '../../utils/utils.scss';
+
+.page {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #ffc900; 
+  .content {
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 100vh;
+    left: 0;
+    position: relative;
+    .bgimg{
+      width: 100%;
+      display: block;
+      margin: 0 auto;
+    }
+    .count {
+      position: absolute;
+      top: pxToVw(80);
+      left: pxToVw(180);
+      width: pxToVw(400);
+      // border: 1px solid black;
+      .date {
+          margin: 0 0 pxToVw(20) 0;
+          text-align: center;
+          font-size: pxToVw(120);
+          color: white;
+          line-height: pxToVw(119);
+          font-weight: bold;
+          text-shadow:1px 5px 0px #fc912b;
+      }
+      .txt {
+          text-align: center;
+          color: white;
+          font-size: pxToVw(46);
+          font-weight: bold;
+          letter-spacing: pxToVw(5);
+          margin: 0;
+          text-shadow:1px 5px 2px #fc912b;
+          margin-bottom: pxToVw(20);
+      }
+      .usertype {
+          border-radius: pxToVw(20);
+          border: 1px;
+          text-align: center;
+          color: white;
+          height: pxToVw(50);
+          width: 100%;
+          margin: 0;
+        span {
+          display: inline-block;
+          width: pxToVw(120);
+          height: pxToVw(30);
+          line-height: pxToVw(32);
+          font-size: pxToVw(24);
+          border: 1px white solid;
+          border-radius: pxToVw(15);
+        }
+      }
+    }
+    .board {
+      width: pxToVw(690);
+      height: pxToVw(353);
+      position: absolute;
+      top: pxToVw(580);
+      left: pxToVw(30);
+      .line {
+        width: pxToVw(689);
+        height: 0;
+        background: #aaa;
+        border: pxToVw(2) solid #aaa;
+        margin-top: pxToVw(80);
+      }
+      .yellowline {
+        width: pxToVw(228);
+        height: 0;
+        background-color: #ffc900;
+        border: pxToVw(4) #ffc900 solid;
+        margin-top: pxToVw(-6)
+      }
+      .signins{
+        // border: pxToVw(2) solid black;
+        width: pxToVw(630);
+        height: pxToVw(100);
+        position: absolute;
+        top: pxToVw(23);
+        left: pxToVw(30);
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        .signleft {
+          display: block;
+          height: pxToVw(100);
+          width: pxToVw(80);
+          // border: 1px solid black;
+          position: relative;
+          img {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: pxToVw(80);
+          }
+          span{
+            display: block;
+            position: absolute;
+            width: pxToVw(80);
+            height: pxToVw(32);
+            top: pxToVw(-10);
+            left: pxToVw(7);
+            img {
+              width: 80%;
+              height: 100%;
+            }
+          }
+          .num {
+            width: pxToVw(69);
+            height: pxToVw(30);
+            position: absolute;
+            text-align: center;
+            line-height: pxToVw(30);
+            top: pxToVw(44);
+            color: white;
+            font-weight: bold;
+            left: pxToVw(5);
+            font-size: pxToVw(30);
+          }
+          .date {
+            width: pxToVw(80);
+            height: pxToVw(300);
+            position: absolute;
+            top: pxToVw(100);
+            left: 0;
+            font-size: pxToVw(15);
+            color: #999;
+            text-align: center;
+          }
+        }
+        .signright {
+          display: block;
+          height: pxToVw(100);
+          width: pxToVw(80);
+          position: relative;
+          img {
+            position: absolute;
+            bottom: pxToVw(10);
+            left: pxToVw(12);
+            width: pxToVw(58);
+          }
+          span{
+            display: block;
+            position: absolute;
+            width: pxToVw(80);
+            height: pxToVw(46);
+            top: pxToVw(-11);
+            left: pxToVw(8);
+            img {
+              width: 80%;
+              height: 80%;
+              position: static;
+            }
+          }
+          .date {
+            width: pxToVw(80);
+            height: pxToVw(300);
+            position: absolute;
+            top: pxToVw(100);
+            left: pxToVw(3);
+            font-size: pxToVw(15);
+            color: #999;
+            text-align: center;
+          }
+        }
+        .signtoday {
+          @extend .signleft;
+          .num {
+            font-size: pxToVw(18);
+            font-weight: 300;
+          }
+          .date {
+            color: #fc912b;
+          }
+        }
+      }
+      .btn {
+        position: absolute;
+        top: pxToVw(165);
+        left: pxToVw(220);
+        width: pxToVw(247);
+        height: pxToVw(80);
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .word {
+        width: pxToVw(590);
+        position: absolute;
+        top: pxToVw(260);
+        left: pxToVw(50);
+        .firstline {
+          text-align: center;
+          color: #999;
+          font-size: pxToVw(20);
+          line-height: pxToVw(30);
+          margin: 0;
+
+        }
+        .secondline {
+          text-align: center;
+          color: #777;
+          font-size: pxToVw(22);
+          font-weight: bold;
+          line-height: pxToVw(40);
+          margin:0;
+        }
+      }
+    }
+    .buybox {
+      position: absolute;
+      top: pxToVw(1479);
+      left: pxToVw(54);
+      width: pxToVw(643);
+      height: pxToVw(346);
+      // border: 1px solid white;
+      border-radius: pxToVw(10);
+    }
+  }
+  
+}
+
+  .modalSuccess{
+    .imgWrap{
+      width: 80%;
+      position: relative;
+      .magnify{
+          width: pxToVw(330);
+          height: pxToVw(110);
+          position: absolute;
+          // border: 1px solid red;
+          bottom: 38%;
+          left: 24%;
+          text-align: center;
+          line-height: pxToVw(110);
+          font-size: pxToVw(63);
+          color: white;
+          font-weight: bold;
+      }
+      .toCard{
+        width: pxToVw(500);
+        height: pxToVw(100);
+        // border: 1px solid red;
+        position: absolute;
+        bottom: 15%;
+        right: 7%;
+      }
+    }
+    img{
+      width: 100%;
+    }
+    .closeSuccess{
+      width: pxToVw(50);
+      height: pxToVw(50);
+      // border: 1px solid red;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  .modalInfo{
+    .imgWrap{
+      width: 80%;
+      position: relative;
+    }
+    img{
+      width: 100%;
+    }
+    .btn{
+      width: pxToVw(58);
+      height: pxToVw(58);
+      position: absolute;
+      bottom: 0;
+      left: 45%;
+    }
+    .shareBtn {
+      width: pxToVw(320);
+      height: pxToVw(80);
+      position: absolute;
+      bottom: 41%;
+      left: 23%;
+    }
+    .shareToCard{
+      width: pxToVw(500);
+      height: pxToVw(120);
+      // border: 1px solid red;
+      position: absolute;
+      bottom: 21%;
+      right: 7%;
+    }
+  }
+
+
+.modal{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, .6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bottom{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: pxToVw(120);
+  display: flex;
+  background-color: #ffc900;
+  .bottomItem{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img{
+      width: pxToVw(319);
+      height: pxToVw(105);
+    }
+  }
+}
+.modalShare{
+  align-items: flex-start !important;
+  img{
+    margin-top: pxToVw(50);
+    width: 90%;
+  }
+  .close{
+    width: pxToVw(80);
+    height: pxToVw(80);
+    position: absolute;
+    top: 6%;
+    left: 4%;
+  }
+  .imgWrap {
+    display: block;
+    width: pxToVw(50);
+    height: pxToVw(50);
+    // border: 1px red solid;
+    position: absolute;
+    top: pxToVw(89);
+    left: pxToVw(61);
+  }
+
+}

@@ -1,0 +1,40 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "cross-env API_ENV=dev roadhog server",
+    "build": "cross-env API_ENV=prod roadhog build",
+    "build:dev": "cross-env API_ENV=dev roadhog build",
+    "lint": "eslint --ext .js src test",
+    "precommit": "npm run lint"
+  },
+  "dependencies": {
+    "antd-mobile": "^2.2.1",
+    "axios": "^0.18.0",
+    "babel-plugin-import": "^1.8.0",
+    "classnames": "^2.2.6",
+    "dva": "^2.3.1",
+    "dva-loading": "^2.0.3",
+    "moment": "^2.22.2",
+    "node-sass": "^4.9.2",
+    "path-to-regexp": "^2.2.1",
+    "prop-types": "^15.6.2",
+    "rc-form": "^2.2.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "sass-loader": "^7.0.3"
+  },
+  "devDependencies": {
+    "babel-plugin-dva-hmr": "^0.3.2",
+    "clipboard": "^2.0.1",
+    "cross-env": "^5.2.0",
+    "eslint": "^4.14.0",
+    "eslint-config-umi": "^0.1.1",
+    "eslint-plugin-flowtype": "^2.34.1",
+    "eslint-plugin-import": "^2.6.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.1.0",
+    "husky": "^0.12.0",
+    "redbox-react": "^1.4.3",
+    "roadhog": "^2.0.0"
+  }
+}

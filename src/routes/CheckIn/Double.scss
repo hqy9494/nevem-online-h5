@@ -1,0 +1,113 @@
+@import '../../utils/utils.scss';
+
+.container {
+    position: relative;
+
+  .doubleBg {
+      display: block;
+      width: 100%;
+  }
+
+  .doubleBox{
+      width: pxToVw(500);
+      position: absolute;
+      left: 50%;
+      top: pxToVw(290);
+      color: #fff;
+      text-align: center;
+      transform: translateX(-50%);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+
+      .doubleItem{
+          margin-bottom: pxToVw(10);
+
+          img{
+            display: inline-block;
+            width: pxToVw(234);
+            height: pxToVw(308);
+          }
+
+          .moveImg{
+            animation:myMove 1s ease-in-out 2;
+            -webkit-animation:myMove 0.6s ease-in-out 2; /*Safari and Chrome*/
+
+            //transition:transform 0.4s ease-in-out;
+            //-webkit-transition:All 0.4s ease-in-out;
+            //-moz-transition:All 0.4s ease-in-out;
+            //-o-transition:All 0.4s ease-in-out;
+            //transform:scale(1.2);
+          }
+
+          @keyframes myMove
+          {
+            0% {transform:scale(1);}
+            50% {transform:scale(1.2);}
+            100% {transform:scale(1);}
+          }
+
+      }
+
+  }
+
+  .modal{
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      background-color: rgba(0, 0, 0, .6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+   .modalTen{
+        .imgWrap{
+          width: 80%;
+          position: relative;
+        }
+        img{
+          width: 100%;
+        }
+        .btn{
+          width: pxToVw(80);
+          height: pxToVw(80);
+          position: absolute;
+          top: 0%;
+          right: 4%;
+        }
+        .btnOpen{
+          width: pxToVw(300);
+          height: pxToVw(80);
+          position: absolute;
+          top: 85%;
+          right: 24%;
+        }
+    }
+  .modalDisplay{
+    width: pxToVw(490);
+    height: pxToVw(620);
+    position: absolute;
+    left: 17%;
+    top: 28%;
+    img{
+      width: 100%;
+    }
+    .showHide{
+      ////animation:showHide 2s ease-in-out 1;
+      ////-webkit-animation:showHide 2s ease-in-out 1; /*Safari and Chrome*/
+      //-webkit-transition: opacity 2s ease-in;
+      //-moz-transition: opacity 2s ease-in;
+      //transition: opacity 2s ease-in;
+    }
+
+    //@keyframes showHide
+    //{
+    //  0% {transform:scale(1);}
+    //  50% {transform:scale(0.8);}
+    //  100% {transform:scale(0);}
+    //}
+  }
+}

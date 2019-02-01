@@ -1,0 +1,368 @@
+@import '../../utils/utils.scss';
+
+.page{
+  position: relative;
+
+  img{
+    display: block;
+    width: 100%;
+  }
+
+  .scaleWrap{
+    width: 86%;
+    height: pxToVw(70);
+    border-radius: pxToVw(20);
+    position: absolute;
+    top: 51%;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
+    .scaleFont{
+      height: 100%;
+      display: flex;
+      div{
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: pxToVw(30);
+        font-weight: bold;
+        color: #fff;
+      }
+    }
+    .scale{
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      background: #3542fb;
+    }
+    .slip{
+      height: 100%;
+      width: 50%;
+      background-color: #fd1859;
+    }
+  }
+
+  .box{
+    width: 87%;
+    height: pxToVw(650);
+    position: absolute;
+    left: 50%;
+    top: 55.5%;
+    transform: translateX(-50%);
+    display: flex;
+    .child{
+      flex: 1;
+      padding-top: pxToVw(110);
+      padding-left: pxToVw(40);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+    .childLeft{
+      .num{
+        background-color: #9D2428;
+      }
+    }
+    .childRight{
+      .num{
+        background-color: #2735AA;
+      }
+    }
+    .item{
+      display: flex;
+      color: #fff;
+
+      &:first-child .itemRight::before{
+        content: '队长';
+        border-radius: pxToVw(10);
+        padding: pxToVw(2) pxToVw(4);
+        position: absolute;
+        left: 0;
+        top: pxToVw(-40);
+        border: 1px solid #fff;
+        font-size: pxToVw(20);
+      }
+      .itemLeft{
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        img{
+          width: pxToVw(66);
+          height: pxToVw(66);
+          border-radius: pxToVw(66);
+        }
+        .crown{
+          width: pxToVw(34);
+          height: pxToVw(32);
+          position: absolute;
+          right: 5%;
+          top: -14%;
+        }
+      }
+      .itemRight{
+        position: relative;
+        flex: 2;
+        .name{
+          font-size: pxToVw(26);
+        }
+        .num{
+          width: pxToVw(88);
+          height: pxToVw(37);
+          margin-top: pxToVw(4);
+          border-radius: pxToVw(30);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: pxToVw(22);
+        }
+      }
+    }
+  }
+  .lackNum{
+    width: 90%;
+    position: absolute;
+    bottom: 9.7%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #A24812;
+    font-weight: bold;
+    font-size: pxToVw(32);
+    font-weight: bold;
+    text-align: center;
+    span{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      display: inline-block;
+      width: pxToVw(80);
+      border-radius: pxToVw(20);
+      height: pxToVw(40);
+      background-color: #fff;
+      color: red;
+      margin: 0 pxToVw(10);
+    }
+  }
+}
+
+.modalPkSuccess{
+  img{
+    width: 96%;
+  }
+  .list{
+    width: 60%;
+    height: pxToVw(460);
+    position: absolute;
+    top: 32%;
+    left: 50%;
+    transform: translateX(-49%);
+    display: flex;
+    flex-direction: column;
+  }
+  .item{
+    flex: 1;
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    align-items: center;
+    &:first-child .itemCenter .itemCenterName::after{
+      content: '队长';
+      width: pxToVw(60);
+      text-align: center;
+      position: absolute;
+      right: pxToVw(-80);
+      top: 50%;
+      transform: translateY(-50%);
+      color: #ED303D;
+      border: 1px solid #ED303D;
+      border-radius: pxToVw(10);
+    }
+    .itemLeft{
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img{
+        width: pxToVw(60);
+        height: pxToVw(60);
+        border-radius: pxToVw(60);
+      }
+    }
+    .itemCenter{
+      flex: 3;
+      font-size: pxToVw(20);
+      .itemCenterName{
+        color: #6F6F6F;
+        display: inline-block;
+        position: relative;
+      }
+      .itemCenterSub{
+        margin-top: pxToVw(8);
+        color: #ED303D;
+      }
+    }
+    .itemRight{
+      flex: 1;
+      font-size: pxToVw(20);
+      .itemRightNum{
+        padding: pxToVw(2) pxToVw(6);
+        background-color: #ED303D;
+        color: #fff;
+        white-space: nowrap;
+        border-radius: pxToVw(10);
+      }
+      .itemRightSub{
+        margin-top: pxToVw(8);
+        color: #ED303D;
+      }
+    }
+  }
+  .modalPkSuccessBtn{
+    width: 34%;
+    height: pxToVw(70);
+    position: absolute;
+    bottom: 12.6%;
+  }
+  .modalPkSuccessBtn1{
+    left: 16%;
+  }
+  .modalPkSuccessBtn2{
+    right: 14%;
+  }
+}
+
+.modalMember{
+  .imgWrap{
+    width: 90%;
+    position: relative;
+  }
+  img{
+    width: 100%;
+  }
+  .btn{
+    width: 34%;
+    height: pxToVw(80);
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.modalFail{
+  .imgWrap{
+    width: 80%;
+    position: relative;
+  }
+  img{
+    width: 100%;
+  }
+  .btn{
+    width: 44%;
+    height: pxToVw(80);
+    position: absolute;
+    left: 50%;
+    bottom: 3%;
+    transform: translateX(-50%);
+  }
+}
+
+.modalLike{
+  .imgWrap{
+    width: 90%;
+    position: relative;
+  }
+  img{
+    width: 100%;
+  }
+  .left, .right{
+    width: pxToVw(230);
+    height: pxToVw(80);
+    position: absolute;
+    bottom: 2%;
+  }
+  .left{
+    left: 16%;
+  }
+  .right{
+    right: 13%;
+  }
+}
+
+.modalTimeout{
+  img{
+    width: 90%;
+  }
+}
+
+.modalCrystal{
+  .imgWrap{
+    position: relative;
+    width: 90%;
+  }
+  img{
+    width: 100%;
+  }
+  .crystal{
+    width: 60%;
+    //height: 10%;
+    position: absolute;
+    bottom: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    img{
+      width: 100%;
+    }
+  }
+  .toLike{
+    width: 60%;
+    //height: 10%;
+    position: absolute;
+    bottom: 12%;
+    left: 50%;
+    transform: translateX(-50%);
+    img{
+      width: 100%;
+    }
+  }
+  .crystalFont{
+    width: 80%;
+    text-align: center;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #FFF0E6;
+    font-size: pxToVw(30);
+    font-weight: bold;
+  }
+}
+
+.modalFindLike{
+  align-items: flex-start !important;
+  img{
+    margin-top: pxToVw(50);
+    width: 90%;
+  }
+  .close{
+    width: pxToVw(80);
+    height: pxToVw(80);
+    position: absolute;
+    top: 6%;
+    left: 4%;
+  }
+}
+
+.time{
+  position: absolute;
+  top: 57.7%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: red;
+  font-size: pxToVw(30);
+  font-weight: bold;
+}

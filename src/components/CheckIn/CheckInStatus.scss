@@ -1,0 +1,134 @@
+@import '../../utils/utils.scss';
+
+
+.statusItem{
+    width: pxToVw(98);
+    padding: 0;
+    margin: 0;
+    position: relative;
+
+    .statusContent{
+
+        .statusLine::after{
+            content: "";
+            display: inline-block;
+            background: #ddd;
+//          background: #fed842;
+            height: 3px;
+            width: pxToVw(36);
+            -webkit-transition: background .3s;
+            transition: background .3s;
+            position: absolute;
+            left: pxToVw(-19);
+            top: pxToVw(36);
+        }
+
+        .statusLineAct::after{
+            background: #fed842;
+        }
+
+        .statusIcon{
+            position: relative;
+            text-align: center;
+            z-index: 999;
+
+            .statusBadge{
+                position: absolute;
+                left: pxToVw(10);
+                top: pxToVw(-26);
+                font-size: pxToVw(18);
+                color: #9E9E9E;
+                border: 1px solid #9e9e9e;
+                border-radius: pxToVw(20);
+                padding: 1px pxToVw(12);
+            }
+            .statusBadge:after, .statusBadge:before {
+                border: solid transparent;
+                content: ' ';
+                height: 0;
+                top: 100%;
+                position: absolute;
+                width: 0;
+            }
+
+            .statusBadge:after {
+                border-width: 4px;
+                border-top-color: #fff;
+                left: 18px;
+                top: 12px;
+            }
+
+            .statusBadge:before {
+                border-width: 4px;
+                border-top-color: #9e9e9e;
+                left: 18px;
+            }
+            //red
+            .statusBadgeRed{
+                color: #fff;
+                background: #FC5811;
+                border: 1px solid #FC5811;
+            }
+            .statusBadgeRed:after, .statusBadgeRed:before {
+                border: solid transparent;
+                content: ' ';
+                height: 0;
+                top: 100%;
+                position: absolute;
+                width: 0;
+            }
+
+            .statusBadgeRed:after {
+                border-width: 4px;
+                border-top-color: #FC5811;
+                left: 18px;
+                top: 12px;
+            }
+
+            .statusBadgeRed:before {
+                border-width: 4px;
+                border-top-color: #FC5811;
+                left: 18px;
+            }
+            img{
+                 width: pxToVw(80);
+                 text-align: center;
+            }
+            .topYes{
+                position: absolute;
+                top: pxToVw(-22);
+            }
+            .statusIntegral{
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                top: pxToVw(22);
+                color: #fff;
+                line-height: 1.4;
+                font-size: pxToVw(22);
+                font-weight: bold;
+                font-style: normal;
+            }
+            .statusTag{
+                display: block;
+                position: absolute;
+                top: pxToVw(-30);
+                left: 50%;
+                transform: translateX(-52%);
+
+                img{
+                    width: pxToVw(64);
+                }
+            }
+        }
+        .statusDay{
+            text-align: center;
+            line-height: 0.8;
+
+            span{
+                font-size: pxToVw(12);
+                color: #9E9E9E;
+            }
+        }
+    }
+}

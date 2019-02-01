@@ -1,0 +1,115 @@
+@import '../../../utils/utils.scss';
+
+.modal{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, .6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalPkSuccess{
+  .imgWrap{
+    position: relative;
+    width: 96%;
+  }
+  img{
+    display: block;
+    width: 100%;
+  }
+  .sum{
+    width: 90%;
+    text-align: center;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: pxToVw(100);
+    font-weight: bold;
+    color: #fff;
+  }
+  .list{
+    width: 60%;
+    height: pxToVw(460);
+    position: absolute;
+    top: 24%;
+    left: 50%;
+    transform: translateX(-49%);
+    display: flex;
+    flex-direction: column;
+  }
+  .item{
+    flex: 1;
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    align-items: center;
+    &:first-child .itemCenter .itemCenterName::after{
+      content: '队长';
+      width: pxToVw(60);
+      text-align: center;
+      position: absolute;
+      right: pxToVw(-80);
+      top: 50%;
+      transform: translateY(-50%);
+      color: #ED303D;
+      border: 1px solid #ED303D;
+      border-radius: pxToVw(10);
+    }
+    .itemLeft{
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img{
+        width: pxToVw(60);
+        height: pxToVw(60);
+        border-radius: pxToVw(60);
+      }
+    }
+    .itemCenter{
+      flex: 3;
+      font-size: pxToVw(20);
+      .itemCenterName{
+        color: #6F6F6F;
+        display: inline-block;
+        position: relative;
+      }
+      .itemCenterSub{
+        margin-top: pxToVw(8);
+        color: #ED303D;
+      }
+    }
+    .itemRight{
+      flex: 1;
+      font-size: pxToVw(20);
+      .itemRightNum{
+        padding: pxToVw(2) pxToVw(6);
+        background-color: #ED303D;
+        color: #fff;
+        white-space: nowrap;
+        border-radius: pxToVw(10);
+      }
+      .itemRightSub{
+        margin-top: pxToVw(8);
+        color: #ED303D;
+      }
+    }
+  }
+  .modalPkSuccessBtn{
+    width: 34%;
+    height: pxToVw(70);
+    position: absolute;
+    bottom: 2%;
+  }
+  .modalPkSuccessBtn1{
+    left: 16%;
+  }
+  .modalPkSuccessBtn2{
+    right: 14%;
+  }
+}

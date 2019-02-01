@@ -1,0 +1,39 @@
+@import '../../utils/utils.scss';
+.form {
+  :global(.am-list-content) {
+    flex: 0 1 auto !important;
+    width: 85px !important;
+    margin-right: 5px !important;
+  }
+  :global(.am-list-extra) {
+    flex: 1 !important;
+    text-align: left !important;
+  }
+  :global(.am-list-arrow) {
+    // flex: 1 1 !important;
+    background-position: 100% 50% !important;
+  }
+}
+
+.submit {
+  display: block;
+  margin: pxToVw(40) pxToVw(25) 0;
+  height: pxToVw(75);
+  line-height: pxToVw(75);
+  background-color: #FFD328;
+  color: #000;
+  font-size: pxToVw(36);
+  text-align: center;
+  border-radius: pxToVw(6);
+}
+.remove {
+  display: block;
+  margin: pxToVw(30) pxToVw(25) 0;
+  height: pxToVw(75);
+  line-height: pxToVw(75);
+  background-color: #fff;
+  color: #FF5757;
+  font-size: pxToVw(36);
+  text-align: center;
+  border-radius: pxToVw(6);
+}

@@ -1,0 +1,221 @@
+@import '../../utils/utils.scss';
+
+.top {
+  position: relative;
+  width: pxToVw(750);
+  height: pxToVw(377);
+  background-image: url(../../assets//Img/a3.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.topName {
+  position: absolute;
+  top: 20vw;
+  left: 8vw;
+  font-size: pxToVw(60);
+  color: #30292C;
+}
+
+.title {
+  position: relative;
+  margin-top: pxToVw(20);
+  padding: pxToVw(24) pxToVw(16);
+  padding-left: pxToVw(180);
+  background-color: #fff;
+  height: pxToVw(168);
+  box-sizing: border-box;
+
+  img {
+    position: absolute;
+    top: 50%;
+    left: pxToVw(16);
+    transform: translateY(-50%);
+    width: pxToVw(150);
+    height: pxToVw(150);
+  }
+}
+
+.number {
+  font-size: pxToVw(24);
+  color: #333;
+  padding: pxToVw(13) pxToVw(30);
+  background-color: #e9e9e9;
+}
+
+.titleText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.newState {
+  display: block;
+  font-size: pxToVw(30);
+  color: #333;
+}
+
+.newDate {
+  display: block;
+  margin-top: pxToVw(30);
+  font-size: pxToVw(24);
+  color: #5d5d5d;
+}
+
+.list {
+  margin-top: pxToVw(30);
+  padding: pxToVw(30);
+  padding-left: pxToVw(130);
+  background-color: #fff;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.23);
+
+  &>div {
+    border-left: 1px solid #c5c5c5;
+  }
+}
+
+.item {
+  position: relative;
+  padding-left: pxToVw(36);
+  margin-bottom: pxToVw(75);
+}
+
+.itemIcon {
+  width: pxToVw(48);
+  height: pxToVw(48);
+  font-size: pxToVw(24);
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -0.8vw;
+  left: pxToVw(-24);
+  background-color: #ffd12b;
+  border-radius: 50%;
+}
+
+.itemDarkIcon {
+  width: pxToVw(20);
+  height: pxToVw(20);
+  font-size: pxToVw(24);
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: pxToVw(16);
+  left: pxToVw(-10);
+  background-color: #C5C5C5;
+  border-radius: 50%;
+}
+
+.itemIcon1 {
+  width: pxToVw(48);
+  height: pxToVw(48);
+  position: absolute;
+  top: 0;
+  left: pxToVw(-24);
+  border-radius: 50%;
+  background-image: url(../../assets/Img/icon-express1.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.itemDarkIcon1 {
+  width: pxToVw(48);
+  height: pxToVw(48);
+  position: absolute;
+  top: 0;
+  left: pxToVw(-24);
+  border-radius: 50%;
+  background-image: url(../../assets/Img/icon-expressDark1.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-color: #fff;
+}
+
+.itemIcon2 {
+  width: pxToVw(48);
+  height: pxToVw(48);
+  position: absolute;
+  top: 0;
+  left: pxToVw(-24);
+  border-radius: 50%;
+  background-image: url(../../assets/Img/icon-express2.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.itemIcon3 {
+  width: pxToVw(48);
+  height: pxToVw(48);
+  position: absolute;
+  top: 0;
+  left: pxToVw(-24);
+  border-radius: 50%;
+  background-image: url(../../assets/Img/icon-express3.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.itemIcon4 {
+  width: pxToVw(48);
+  height: pxToVw(48);
+  position: absolute;
+  top: 0;
+  left: pxToVw(-24);
+  border-radius: 50%;
+  background-image: url(../../assets/Img/icon-express4.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.itemIcon5 {
+  width: pxToVw(48);
+  height: pxToVw(48);
+  position: absolute;
+  top: 0;
+  left: pxToVw(-24);
+  border-radius: 50%;
+  background-image: url(../../assets/Img/icon-express5.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.itemDate {
+  position: absolute;
+  top: 0;
+  left: pxToVw(-100);
+}
+
+.itemDay {
+  display: block;
+  font-size: pxToVw(24);
+  color: #999;
+}
+
+.itemTime {
+  display: block;
+  font-size: pxToVw(20);
+  color: #999;
+}
+
+.itemMain {
+  color: 999;
+
+  h3 {
+    margin: 0;
+    padding: 0;
+    font-size: pxToVw(24);
+    line-height: 1.3;
+  }
+
+  p {
+    margin: 0;
+    padding: 0;
+    font-size: pxToVw(20);
+    line-height: 1.5;
+  }
+}

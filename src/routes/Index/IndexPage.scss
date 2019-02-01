@@ -1,0 +1,74 @@
+@import '../../utils/utils.scss';
+
+.page {
+  height: 100%;
+}
+
+.wrap {
+  height: 100%;
+  background: url("../../assets/Img/i1.png") center center no-repeat;
+  // background-size: cover;
+  background-size: 100% 100%;
+  position: relative;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.message {
+  width: pxToVw(78);
+  height: pxToVw(164);
+  position: absolute;
+  right: 0;
+  top: pxToVw(263);
+}
+
+.box {
+  width: pxToVw(500);
+  height: pxToVw(760);
+  position: absolute;
+  left: pxToVw(60);
+  top: pxToVw(320);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item {
+  width: (100%/3);
+  height: (100%/4);
+}
+
+.modal {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .6);
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  .tip {
+    width: pxToVw(507);
+    height: pxToVw(800);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url("../../assets/Img/index-modal.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+
+  .modalClose {
+    width: pxToVw(50);
+    height: pxToVw(90);
+    position: absolute;
+    top: pxToVw(-90);
+    right: 1vw;
+    background-image: url("../../assets/Img/index-close.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+}

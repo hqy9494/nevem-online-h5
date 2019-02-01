@@ -1,0 +1,12 @@
+@import '../../../utils/utils.scss';
+@function p($px) {
+  @return pxToVw($px);
+}
+.footer{height:p(100);width:100%;position: fixed;left: 0;top: auto;bottom: 0;background: #fff;margin: 0;display: flex;padding: 0;
+	>li{flex: 1;
+		>img{display: block;margin: p(10) auto;width: p(40);height: p(40);}
+		>div{text-align: center;height: p(30);line-height: p(30);color: #333;}
+		>div.focus{color: #FFDB48;}
+	}
+	>.focusLi{background: #f3f3f3;}
+}

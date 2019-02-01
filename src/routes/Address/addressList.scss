@@ -1,0 +1,90 @@
+@import '../../utils/utils.scss';
+
+.noData {
+  margin-top: pxToVw(230);
+
+  img {
+    display: block;
+    margin: 0 auto;
+    width: pxToVw(230);
+    height: pxToVw(200);
+  }
+
+  span {
+    margin-top: pxToVw(50);
+    display: block;
+    text-align: center;
+    font-size: pxToVw(30);
+    color: #999;
+  }
+
+}
+
+.noDataAdd {
+  margin-top: pxToVw(25);
+  text-align: center;
+
+  a {
+    margin-top: pxToVw(25);
+    font-size: pxToVw(30);
+    color: #060001;
+    text-decoration: underline;
+  }
+}
+
+.add {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: pxToVw(96);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  a {
+    flex: 1;
+    font-size: pxToVw(24);
+    line-height: pxToVw(96);
+    text-align: center;
+    color: #333;
+    background-color: #FFD328;
+  }
+
+  .addNew {
+    background-color: #FFD328;
+  }
+
+  .addWx {
+    background-color: rgba($color: #FFD328, $alpha: 0.6);
+  }
+}
+
+
+.tabs {
+  width: 100%;
+  height: pxToVw(90);
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tab {
+  width: 50%;
+  font-size: pxToVw(30);
+  color: #000;
+  text-align: center;
+
+  span {
+    display: inline-block;
+    height: pxToVw(90);
+    line-height: pxToVw(90);
+  }
+}
+
+.tabActive {
+  span {
+    border-bottom: 1px solid #000;
+  }
+}

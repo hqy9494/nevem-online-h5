@@ -1,0 +1,39 @@
+@import '../../utils/utils.scss';
+
+.main {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url(../../assets/Img/succ-bg.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.modal {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  // background-image: url(../../assets/Img/succ-modal.png);
+  // background-repeat: no-repeat;
+  // background-size: 100% 100%;
+
+  img {
+    height: 90vh;
+  }
+}
+
+.goback {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20vh;
+  display: block;
+  width: pxToVw(490);
+  height: pxToVw(85);
+  background-image: url(../../assets/Img/succ1-btn.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
